@@ -25,10 +25,10 @@ const rootReducer = (state = initialState, action) => {
         case 'DELETE_CARD':
             let newCard =  state.cards.filter(curr => curr.id !== action.payload);
 
-            //spread all existing state, then override with updated state
+            //spread all existing state, then override with the updated state property
             return {
-               ...state,
-               cards: newCard
+                ...state,
+                cards: newCard
             }
         case 'FETCH_USERS':
             return {
